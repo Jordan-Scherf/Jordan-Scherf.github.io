@@ -157,3 +157,18 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+window.addEventListener("load", function() {
+  // Optional: If you want to remove the loader after fading out
+  var loaderWrapper = document.querySelector(".loader-wrapper");
+  if (loaderWrapper) {
+      loaderWrapper.style.transition = "opacity 2s";
+      loaderWrapper.style.opacity = "0";
+
+      // Optional: If you want to remove the loader after fading out
+      setTimeout(function() {
+          loaderWrapper.style.display = "none";
+          loader.style.display = "none";
+      }, 4000); // Adjust the time (in milliseconds) as needed
+  }
+});
